@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Logic from "./Logic/Logic";
-import { BsArrowBarRight } from "react-icons/bs";
-import { BsArrowBarLeft } from "react-icons/bs";
+// import { BsArrowBarRight } from "react-icons/bs";
+// import { BsArrowBarLeft } from "react-icons/bs";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 const Game = () => {
@@ -99,13 +99,14 @@ const Game = () => {
       <div>
         <p className="block md:hidden absolute text-2xl font-medium ml-3 mt-2 ">
           {!isclick && (
-            <BsArrowBarRight onClick={() => setisclick(true)} size={35} />
+             <div></div>
+            // <BsArrowBarRight onClick={() => setisclick(true)} size={35} />
           )}
         </p>
         {isclick && (
           <div className="p-5 absolute z-[1]  bg-slate-400 h-full  flex flex-col ">
             <p className=" mb-5">
-              <BsArrowBarLeft size={35} onClick={() => setisclick(false)} />
+              {/* <BsArrowBarLeft size={35} onClick={() => setisclick(false)} /> */}
             </p>
             <h1
               onMouseEnter={() => setishover(true)}
