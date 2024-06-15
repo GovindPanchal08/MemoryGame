@@ -71,10 +71,10 @@ const Game = () => {
             onClick={() => setopen(!open)}
             className="text-2xl font-bold bg-black text-white p-2 rounded-lg cursor-pointer"
           >
-            Difficulty Level's
+            Difficulty Level`&apos;`s
           </h1>
           {Object.keys(difficultyLevels).map((i) => (
-            <div className="levels hover:scale-110">
+            <div key={i} className="levels hover:scale-110">
               <button
                 className={`${
                   open ? "block" : "hidden"
@@ -139,10 +139,10 @@ const Game = () => {
                 onClick={() => setopen(!open)}
                 className="text-xl font-bold bg-black text-white p-2 rounded-lg cursor-pointer"
               >
-                Difficulty Level's
+                Difficulty Level`&apos;`s
               </h1>
               {Object.keys(difficultyLevels).map((i) => (
-                <div className="levels hover:scale-110">
+                <div key={i} className="levels hover:scale-110">
                   <button
                     className={`${
                       open ? "block" : "hidden"
