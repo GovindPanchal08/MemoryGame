@@ -38,9 +38,7 @@ const Logic = () => {
   const [moves, setmoves] = useState(0);
   const [disabled, setdisabled] = useState(false);
   const [hintsset, sethintsset] = useState([]);
-  const [highscore, sethighscore] = useState(
-    JSON.parse(localStorage.getItem("high")) || {}
-  );
+  const [highscore, sethighscore] = useState({});
   const [isplaying, setisplaying] = useState(false);
   const handleplaying = () => {
     setisplaying((prevstate) => !prevstate);
@@ -156,8 +154,8 @@ const Logic = () => {
 
   useEffect(() => {
     let timer;
-    if (isplaying ) {
-       timer = setTimeout(() => {
+    if (isplaying) {
+      timer = setTimeout(() => {
         if (!click) return;
         else {
           settime((prev) => prev + 1);
