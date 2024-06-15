@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 const Logic = () => {
-  const audioflipp = new Audio("/Sound/Whip-SoundBible.com-1988767601.mp3");
-  const audiomatch = new Audio("/Sound/match.WAV");
-  const audiogameover = new Audio("/Sound/gameover.mp3");
+  // const audioflipp = new Audio("/Sound/Whip-SoundBible.com-1988767601.mp3");
+  // // const audiomatch = new Audio("/Sound/match.WAV");
+  // const audiogameover = new Audio("/Sound/gameover.mp3");
   const difficultyLevels = {
     easy: {
       rows: 2,
@@ -104,7 +104,7 @@ const Logic = () => {
     if (!disabled && !solved.includes(index) && flipp.length < 2 && isplaying) {
       setflipp([...flipp, index]);
       // document.getElementById('flip-audio').play();
-      audioflipp.play();
+      // audioflipp.play();
       setmoves((prev) => prev + 1);
     }
   };
@@ -136,7 +136,7 @@ const Logic = () => {
     ) {
       sethighscore({ ...highscore, [dificulty]: { score, time, moves } });
     }
-    audiogameover.play();
+    // audiogameover.play();
 
     reset();
   };
